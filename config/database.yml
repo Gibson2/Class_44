@@ -5,12 +5,15 @@
 #   gem 'sqlite3'
 #
 default: &default
+  #adapter: sqlite3
   adapter: postgresql #-- se cambio la base de datos por default sqlite3 por la postgresql
+  encoding: unicode #-- Agragando información necesaria para el mejor funcionamiento de la Base de Datos de Postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
+  adapter: sqlite3 #-- Se agrega el Adaptar a los ambientes de Dev
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -18,8 +21,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  adapter: sqlite3 #-- Se agrega el Adaptar a los ambientes de Test
   database: db/test.sqlite3
 
 production:
   <<: *default
-  database: db/production.postgresql #-- se cambio la base de datos por default production.sqlite3 por la production.postgresql
+  database: Class_44_production #-- se cambio la base de datos por default production.sqlite3 por la Class_44_production
+  username: Class_44
+  password: <%= ENV['CLASS_44_DATABASE_PASSWORD'] %>
+  #database: db/production.sqlite3 
