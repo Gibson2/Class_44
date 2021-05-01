@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get 'pages/two'
   get 'pages/three' #-- Creando la ruta para aplicar una Vista-Controlador
 
-  root 'pages#one' #-- Página incial de las vistas
+  root :to => 'pages#one' #-- Página incial de las vistas
 end
