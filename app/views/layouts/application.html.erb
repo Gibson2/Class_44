@@ -12,11 +12,7 @@
 </head>
 
 <body>
-  <nav class="navbar-inverse">
-    <%= link_to 'One Page', root_path %>
-    <%= link_to 'Two Page', pages_two_path %>
-    <%= link_to 'Three Page', pages_three_path %>
-  </nav>
+  <%= render 'shared/navbar' %>
 
   <%= yield %>
 </body>
