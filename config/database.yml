@@ -27,6 +27,6 @@ test:
 production:
   <<: *default
   database: Class_44_production #-- se cambio la base de datos por default production.sqlite3 por la Class_44_production
-  #username: Class_44
-  #password: <%= ENV['CLASS_44_DATABASE_PASSWORD'] %>
+  username: Class_44
+  password: <%= ENV['CLASS_44_DATABASE_PASSWORD'] %>
   #database: db/production.sqlite3 
