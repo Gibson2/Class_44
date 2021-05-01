@@ -27,7 +27,9 @@ Things you may want to cover:
 
 * Github Project: https://github.com/Gibson2/Class_44
 
-* Heroku Project: https://git.heroku.com/class44examples.git
+* Heroku Project: https://class44examples.herokuapp.com/
+
+- Documention: https://devcenter.heroku.com/articles/getting-started-with-rails6
 
 
 # This project or activity is for EDUCATIONAL use only for the people of the academy Desafío Latam
