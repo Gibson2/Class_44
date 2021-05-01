@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #get 'pages/one' -- Cambiando la ruta de page/one a la página principal por defecto
+  get 'pages/two'
+
+  root 'pages#one' #-- Página incial de las vistas
 end
