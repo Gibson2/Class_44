@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  #get 'one', to: 'pages#one'
   #get 'pages/one' # -- Cambiando la ruta de page/one a la página principal por defecto
-  get 'pages/two'
-  get 'pages/three' #-- Creando la ruta para aplicar una Vista-Controlador
+  get 'two', to: 'pages#two' #-- Mejorando la ruta get 'pages/two'
+  get 'three', to: 'pages#three' #-- Mejorando la ruta -- Creando la ruta para aplicar una Vista-Controlador
+  get 'error', to: 'pages#error' # -- Agregando ruta para el manejo de error con el llamado de las páginas 
   
   root to: 'pages#one' #-- Página incial de las vistas
+
+  get '*path', to: redirect('/error') # -- Esto sería para el manejo de rutas que no esten definidas en el archivo routes.rb
 end
