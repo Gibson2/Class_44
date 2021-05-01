@@ -1,11 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Base Project or Guide for the Generation 44 class 👩‍💻👨‍💻 of Desafío Latam
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.0.0p0
+
+* Ruby version: 6.1.3.1
 
 * System dependencies
 
@@ -22,3 +23,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# Class_44
+
