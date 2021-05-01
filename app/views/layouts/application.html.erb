@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Class44</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Class44</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body>
+  <nav class="navbar-inverse">
+    <%= link_to 'One Page', root_path %>
+    <%= link_to 'Two Page', pages_two_path %>
+    <%= link_to 'Three Page', pages_three_path %>
+  </nav>
+
+  <%= yield %>
+</body>
+<!-- Scripts of Javascript -- deben ir aquí -->
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </html>
