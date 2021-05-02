@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
+  <link rel="stylesheet" href="assets/stylesheets/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/stylesheets/noscript.css" /></noscript>
+
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 </head>
@@ -16,7 +20,16 @@
 
   <%= yield %>
 </body>
+
 <!-- Scripts of Javascript -- deben ir aquí -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </html>
