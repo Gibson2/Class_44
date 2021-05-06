@@ -3,33 +3,55 @@
 
 <head>
   <title>Class44</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <link rel="stylesheet" href="assets/stylesheets/main.css" />
-  <noscript>
-    <link rel="stylesheet" href="assets/stylesheets/noscript.css" /></noscript>
+  <!-- <link rel="stylesheet" href="assets/stylesheets/main.css" /> -->
+  <%= stylesheet_link_tag 'main.css' %>
+  <noscript><%= stylesheet_link_tag 'noscript.css' %>
+    <!-- <link rel="stylesheet" href="assets/stylesheets/noscript.css" /> -->
+  </noscript>
 
+  <!-- CDN - Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 </head>
 
 <body>
+  
+
+<!-- Header -->
+<!-- <div id="header"> -->
+<div id="header" style="background-image: url(<%= asset_path('header.jpg') %>)" >
   <%= render 'shared/navbar' %>
+</div>
 
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
+
+
+
+
+
+  <!-- Scripts of Javascript -- deben ir aquí -->
+  <script src="/app/assets/js/jquery.min.js"></script>
+  <script src="/app/assets/js/jquery.dropotron.min.js"></script>
+  <script src="/app/assets/js/jquery.scrolly.min.js"></script>
+  <script src="/app/assets/js/jquery.scrollex.min.js"></script>
+  <script src="/app/assets/js/browser.min.js"></script>
+  <script src="/app/assets/js/breakpoints.min.js"></script>
+  <script src="/app/assets/js/util.js"></script>
+  <script src="/app/assets/js/main.js"></script>
+
+  <!-- JQ / JS de Bootstrap -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </body>
-
-<!-- Scripts of Javascript -- deben ir aquí -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </html>
