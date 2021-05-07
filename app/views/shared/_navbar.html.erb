@@ -1,12 +1,14 @@
 <!-- Nav -->
 <nav id="nav">
   <ul>
-    <li><%= link_to 'One Page', root_path %></li>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'One Page', one_path %></li>
     <li><%= link_to 'Two Page', two_path %></li>
     <li><%= link_to 'Three Page', three_path %></li>
     <li><a href="#">Dropdown</a>
       <ul>
-        <li><%= link_to 'One Page', root_path %></li>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'One Page', one_path %></li>
         <li><%= link_to 'Two Page', two_path %></li>
         <li><%= link_to 'Three Page', three_path %></li>
         <li><a href="#">And a submenu &hellip;</a>
@@ -17,8 +19,22 @@
             <li><a href="#">Etiam dolore nisl</a></li>
           </ul>
         </li>
-        <li><a href="#">Veroeros feugiat</a></li>
+        <li><%= link_to 'Página de Error', error_path %></li>
       </ul>
     </li>
   </ul>
 </nav>
+
+<!-- Buscardor -->
+<div class="container-fluid">
+  <div class="row pe-2">
+    <div class="col-sm-9">
+    </div>
+    <div class="col-sm-3">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar Aquí" aria-label="Search" name="query">
+        <button class="btn btn-dark " type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</div>
